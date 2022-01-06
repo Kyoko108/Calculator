@@ -2,7 +2,6 @@ package com.example.calculator
 
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,22 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        btnSin = findViewById<Button>(R.id.button_Sine)
-        btnCos = findViewById<Button>(R.id.button_cos)
-        btnTan = findViewById<Button>(R.id.button_tan)
-        btnSinInverse = findViewById<Button>(R.id.button_sin_inverse)
-        btnCosInverse = findViewById<Button>(R.id.button_cos_Inverse)
-        btnTanInverse = findViewById<Button>(R.id.button_tan_Inverse)
-        btnLog = findViewById<Button>(R.id.button_Logarithm)
-        btnLn = findViewById<Button>(R.id.button_NaturalLogarithm)
-        btnLogbase2 = findViewById<Button>(R.id.button_logbase2)
-        btnPower = findViewById<Button>(R.id.button_power)
-        btnSqrt = findViewById<Button>(R.id.button_squareRoot)
-        btnSquare = findViewById<Button>(R.id.buttonSquare)
-        btnExponent = findViewById<Button>(R.id.button_Exponent)
-        btnEpower = findViewById<Button>(R.id.button_exponent_Power)
-        btnPi = findViewById<Button>(R.id.button_pi)
-        btnIsPrime = findViewById<Button>(R.id.button_isPrime)
+
 
         binding.button0.setOnClickListener {
             Input.text = addToInputText("0")
@@ -103,52 +87,52 @@ class MainActivity : AppCompatActivity() {
         binding.buttonFirstBracketClose.setOnClickListener {
             Input.text = addToInputText(")")
         }
-        binding.buttonSine.setOnClickListener {
+        binding.buttonSine?.setOnClickListener {
             Input.text = addToInputText("sin(")
         }
-        binding.buttonCos.setOnClickListener {
+        binding.buttonCos?.setOnClickListener {
             Input.text = addToInputText("cos(")
         }
-        binding.buttonTan.setOnClickListener {
+        binding.buttonTan?.setOnClickListener {
             Input.text = addToInputText("tan(")
         }
-        binding.buttonSinInverse.setOnClickListener {
+        binding.buttonSinInverse?.setOnClickListener {
             Input.text = addToInputText("asin(")
         }
-        binding.buttonCosInverse.setOnClickListener {
+        binding.buttonCosInverse?.setOnClickListener {
             Input.text = addToInputText("acos(")
         }
-        binding.buttonTanInverse.setOnClickListener {
+        binding.buttonTanInverse?.setOnClickListener {
             Input.text = addToInputText("atan(")
         }
-        binding.buttonIsPrime.setOnClickListener {
+        binding.buttonIsPrime?.setOnClickListener {
             Input.text = addToInputText("ispr(")
         }
-       binding.buttonLogarithm.setOnClickListener {
+       binding.buttonLogarithm?.setOnClickListener {
             Input.text = addToInputText("log10(")
         }
-        binding.buttonNaturalLogarithm.setOnClickListener {
+        binding.buttonNaturalLogarithm?.setOnClickListener {
             Input.text = addToInputText("ln(")
         }
-       binding.buttonLogbase2.setOnClickListener {
+       binding.buttonLogbase2?.setOnClickListener {
             Input.text = addToInputText("log2(")
         }
-        binding.buttonSquare.setOnClickListener {
+        binding.buttonSquare?.setOnClickListener {
             Input.text = addToInputText("^2")
         }
-        binding.buttonSquareRoot.setOnClickListener {
+        binding.buttonSquareRoot?.setOnClickListener {
             Input.text = addToInputText("sqrt(")
         }
-        binding.buttonPower.setOnClickListener {
+        binding.buttonPower?.setOnClickListener {
             Input.text = addToInputText("^")
         }
-        binding.buttonPi.setOnClickListener {
+        binding.buttonPi?.setOnClickListener {
             Input.text = addToInputText("pi")
         }
-        binding.buttonExponent.setOnClickListener {
+        binding.buttonExponent?.setOnClickListener {
             Input.text = addToInputText("e")
         }
-        binding.buttonExponentPower.setOnClickListener {
+        binding.buttonExponentPower?.setOnClickListener {
             Input.text = addToInputText("exp(")
         }
 
@@ -170,14 +154,14 @@ class MainActivity : AppCompatActivity() {
              val result = Expression(express).calculate()
              if(result.isNaN())
              {
-                Output.text ="Error"
+                Output.text =""
              }
              else
              {
                 Output.text = DecimalFormat( "0.######").format(result).toString()
              }
          }catch(e:RuntimeException){
-             Output.text ="Error1234"
+             Output.text =""
          }
      }
          }
