@@ -100,55 +100,55 @@ class MainActivity : AppCompatActivity() {
         binding.buttonFirstBracketopen.setOnClickListener {
             Input.text = addToInputText("(")
         }
-        button_firstBracketClose.setOnClickListener {
+        binding.buttonFirstBracketClose.setOnClickListener {
             Input.text = addToInputText(")")
         }
-        btnSin.setOnClickListener {
+        binding.buttonSine.setOnClickListener {
             Input.text = addToInputText("sin(")
         }
-        btnCos.setOnClickListener {
+        binding.buttonCos.setOnClickListener {
             Input.text = addToInputText("cos(")
         }
-        btnTan.setOnClickListener {
+        binding.buttonTan.setOnClickListener {
             Input.text = addToInputText("tan(")
         }
-        btnSinInverse.setOnClickListener {
+        binding.buttonSinInverse.setOnClickListener {
             Input.text = addToInputText("asin(")
         }
-        btnCosInverse.setOnClickListener {
+        binding.buttonCosInverse.setOnClickListener {
             Input.text = addToInputText("acos(")
         }
-        btnTanInverse.setOnClickListener {
+        binding.buttonTanInverse.setOnClickListener {
             Input.text = addToInputText("atan(")
         }
-        btnIsPrime.setOnClickListener {
+        binding.buttonIsPrime.setOnClickListener {
             Input.text = addToInputText("ispr(")
         }
-        btnLog.setOnClickListener {
+       binding.buttonLogarithm.setOnClickListener {
             Input.text = addToInputText("log10(")
         }
-        btnLn.setOnClickListener {
+        binding.buttonNaturalLogarithm.setOnClickListener {
             Input.text = addToInputText("ln(")
         }
-        btnLogbase2.setOnClickListener {
+       binding.buttonLogbase2.setOnClickListener {
             Input.text = addToInputText("log2(")
         }
-        btnSquare.setOnClickListener {
+        binding.buttonSquare.setOnClickListener {
             Input.text = addToInputText("^2")
         }
-        btnSqrt.setOnClickListener {
+        binding.buttonSquareRoot.setOnClickListener {
             Input.text = addToInputText("sqrt(")
         }
-        btnPower.setOnClickListener {
+        binding.buttonPower.setOnClickListener {
             Input.text = addToInputText("^")
         }
-        btnPi.setOnClickListener {
+        binding.buttonPi.setOnClickListener {
             Input.text = addToInputText("pi")
         }
-        btnExponent.setOnClickListener {
+        binding.buttonExponent.setOnClickListener {
             Input.text = addToInputText("e")
         }
-        btnEpower.setOnClickListener {
+        binding.buttonExponentPower.setOnClickListener {
             Input.text = addToInputText("exp(")
         }
 
