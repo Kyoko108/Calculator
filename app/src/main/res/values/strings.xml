@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="clear">C</string>
+    <string name="sqrt">Sqrt</string>
+    <string name="clearOn">C</string>
+    <string name="clearOff">Ac</string>
+    <string name="firstOpen">(</string>
+    <string name="firstClose">)</string>
+    <string name="cbrt">cbrt</string>
+    <string name="cube">^3</string>
+    <string name="divide">÷</string>
+    <string name="SinInverse">sin^-1</string>
+    <string name="isPrime">isPrime()</string>
+    <string name="Log">log</string>
+    <string name="Sine">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="CosInverse">cos^-1</string>
+    <string name="Pi">π</string>
+    <string name="ln">ln</string>
+    <string name="E">e</string>
+    <string name="epower">e^</string>
+    <string name="TanInverse">tan^-1</string>
+    <string name="log2">log2</string>
+    <string name="square">^2</string>
+    <string name="squareroot">√</string>
+    <string name="nine">9</string>
+    <string name="multiplication">*</string>
+    <string name="power">^</string>
+    <string name="firstBOpen">(</string>
+    <string name="firstBclose">)</string>
+    <string name="division">÷</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="subtraction">-</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="addition">+</string>
+    <string name="zero">0</string>
+    <string name="point">.</string>
+    <string name="equals">=</string>
+
+
+</resources>
