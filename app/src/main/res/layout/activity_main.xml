@@ -10,38 +10,37 @@
 
     <TextView
         android:id="@+id/Input"
-        android:layout_width="263dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="72dp"
-        android:cursorVisible="true"
+        android:layout_width="247dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="96dp"
+        android:allowUndo="true"
         android:textAlignment="textEnd"
         android:textColor="#070000"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/Output"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/Output"
         android:layout_width="323dp"
         android:layout_height="90dp"
         android:layout_below="@+id/Input"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:enabled="true"
         android:textAlignment="textEnd"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Input" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Output">
@@ -292,5 +291,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_DecimalPoint"
             app:layout_constraintTop_toBottomOf="@+id/button_Plus" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/memory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
+        app:backgroundTint="@color/greenAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:listitem="@layout/memory_rv_item"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

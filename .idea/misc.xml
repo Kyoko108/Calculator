@@ -12,9 +12,11 @@
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/drawable/equals_button_background.xml" value="0.2203125" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/drawable/ic_baseline_backspace_24.xml" value="0.2203125" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/drawable/ic_baseline_clear_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/layout/memory_rv_item.xml" value="0.33" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/mipmap-anydpi-v26/Calculator.xml" value="0.2203125" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/mipmap-anydpi-v26/calculator3.xml" value="0.14375" />
         <entry key="..\:/Users/dre64/AndroidStudioProjects/Calculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22" />

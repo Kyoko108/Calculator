@@ -3,17 +3,23 @@ package com.example.calculator
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.calculator.databinding.ActivityMainBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.memory_rv_item.*
 import org.mariuszgromada.math.mxparser.Expression
 import java.text.DecimalFormat
 
-class MainActivity : AppCompatActivity() {
+abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
 
-
-
-
-
+    // on below line we are creating a variable
+    // for our recycler view, exit text, button and viewmodel.
+    private lateinit var viewModel: MemoryViewModel
+    private lateinit var notesRV: RecyclerView
+    private lateinit var memory: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonEquals.setOnClickListener {
            showResult()
+
         }
         binding.buttonDecimalPoint.setOnClickListener {
             Input.text = addToInputText(".")
@@ -135,8 +142,41 @@ class MainActivity : AppCompatActivity() {
         binding.buttonExponentPower?.setOnClickListener {
             Input.text = addToInputText("exp(")
         }
+binding.memory?.setOnClickListener {
+    if(it.isActivated)
+    {
+        val calculation = StringBuilder()
+        calculation.append(Input.text.toString()).append("=").append(Output.text.toString())
+
+        viewModel.addNote( Memory(noteTitle = Memory ,
+            noteDescription = calculation.toString(),  timeStamp = Date))
+    }
+}
+        notesRV = findViewById(R.id.notesRV)
+        memory = findViewById(R.id.memory)
 
 
+        notesRV.layoutManager = LinearLayoutManager(this)
+
+
+        val memoryAdapter = MemoryAdapter(this, this)
+
+
+        notesRV.adapter = memoryAdapter
+
+
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        )[MemoryViewModel::class.java]
+
+
+        viewModel.allNotes.observe(this,  { list ->
+            list?.let {
+
+                memoryAdapter.updateList(it)
+            }
+        })
 
     }
 
@@ -152,6 +192,7 @@ class MainActivity : AppCompatActivity() {
          try{
             val express = getInputFromUser()
              val result = Expression(express).calculate()
+
              if(result.isNaN())
              {
                 Output.text =""
@@ -164,8 +205,8 @@ class MainActivity : AppCompatActivity() {
              Output.text =""
          }
      }
-         }
 
 
 
 
+}
