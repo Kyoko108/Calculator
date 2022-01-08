@@ -1,29 +1,25 @@
 package com.example.calculator
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
+import com.example.calculator.data.MemoryDao
+import com.example.calculator.data.MemoryDatabase
 import kotlinx.coroutines.launch
 
-class MemoryViewModel (application: Application) :AndroidViewModel(application) {
+class MemoryViewModel:ViewModel() {
+    private lateinit var memoryDao: MemoryDao
+    lateinit var memoryListLiveData:LiveData<List<MemoryDao>>
 
-
-    val allNotes : LiveData<List<Memory>>
-    private val repository : MemoryRepository
-
-
-    init {
-        val dao = MemoryDatabase.getDatabase(application).getNotesDao()
-        repository = MemoryRepository(dao)
-        allNotes = repository.allNotes
+    fun init (app:Application){
+        memoryDao = MemoryDatabase.getDatabase(app).getDao()
     }
 
+  fun saveMemory(data:String)
+    {
+       viewModelScope.launch {
+           memoryDao.saveMemory(data = data) }
 
-
-
-    fun addNote(note: Memory) = viewModelScope.launch(Dispatchers.IO) {
-        repository.insert(note)
     }
 }

@@ -2,23 +2,17 @@ package com.example.calculator
 
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.calculator.databinding.ActivityMainBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.memory_rv_item.*
 import org.mariuszgromada.math.mxparser.Expression
 import java.text.DecimalFormat
 
-abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
+ class MainActivity : AppCompatActivity(){
 
 
-    private lateinit var viewModel: MemoryViewModel
-    private lateinit var notesRV: RecyclerView
-    private lateinit var memory: FloatingActionButton
+     private val viewModel by viewModels<MemoryViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,28 +21,31 @@ abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
         setContentView(binding.root)
 
 
+        viewModel.init(application)
+
+
         binding.button0.setOnClickListener {
             Input.text = addToInputText("0")
         }
         binding.button1.setOnClickListener {
-           Input.text = addToInputText("1")
+            Input.text = addToInputText("1")
         }
         binding.button2.setOnClickListener {
             Input.text = addToInputText("2")
         }
-      binding.button3.setOnClickListener {
-           Input.text = addToInputText("3")
+        binding.button3.setOnClickListener {
+            Input.text = addToInputText("3")
         }
         binding.button4.setOnClickListener {
             Input.text = addToInputText("4")
         }
-       binding.button5.setOnClickListener {
+        binding.button5.setOnClickListener {
             Input.text = addToInputText("5")
         }
-       binding.button6.setOnClickListener {
+        binding.button6.setOnClickListener {
             Input.text = addToInputText("6")
         }
-       binding.button7.setOnClickListener {
+        binding.button7.setOnClickListener {
             Input.text = addToInputText("7")
         }
         binding.button8.setOnClickListener {
@@ -63,28 +60,28 @@ abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
         binding.buttonMinus.setOnClickListener {
             Input.text = addToInputText("-")
         }
-       binding.buttonInto.setOnClickListener {
+        binding.buttonInto.setOnClickListener {
             Input.text = addToInputText("*")
         }
         binding.buttonDivide.setOnClickListener {
             Input.text = addToInputText("/")
         }
         binding.buttonEquals.setOnClickListener {
-           showResult()
+            showResult()
 
         }
         binding.buttonDecimalPoint.setOnClickListener {
             Input.text = addToInputText(".")
         }
         binding.buttonClear.setOnCheckedChangeListener { _, isChecked ->
-            if(isChecked)
-            {
-                var s: String = Input.text.toString()//this particular syntax is mandatory for the toggle button to run successfully
-                s= s.substring(0,s.length-1)
+            if (isChecked) {
+                var s: String =
+                    Input.text.toString()//this particular syntax is mandatory for the toggle button to run successfully
+                s = s.substring(0, s.length - 1)
                 Input.text = s
-            }else{
-                Input.text=""
-                Output.text=""
+            } else {
+                Input.text = ""
+                Output.text = ""
             }
         }
         binding.buttonFirstBracketopen.setOnClickListener {
@@ -114,13 +111,13 @@ abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
         binding.buttonIsPrime?.setOnClickListener {
             Input.text = addToInputText("ispr(")
         }
-       binding.buttonLogarithm?.setOnClickListener {
+        binding.buttonLogarithm?.setOnClickListener {
             Input.text = addToInputText("log10(")
         }
         binding.buttonNaturalLogarithm?.setOnClickListener {
             Input.text = addToInputText("ln(")
         }
-       binding.buttonLogbase2?.setOnClickListener {
+        binding.buttonLogbase2?.setOnClickListener {
             Input.text = addToInputText("log2(")
         }
         binding.buttonSquare?.setOnClickListener {
@@ -141,44 +138,15 @@ abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
         binding.buttonExponentPower?.setOnClickListener {
             Input.text = addToInputText("exp(")
         }
-        binding.memory?.setOnClickListener {
-    if(it.isActivated)
-    {
-        val calculation = StringBuilder()
-        calculation.append(Input.text.toString()).append("=").append(Output.text.toString())
-
-        viewModel.addNote( Memory(noteTitle = Memory ,
-            noteDescription = calculation.toString(),  timeStamp = Date))
-    }
-}
-        notesRV = findViewById(R.id.notesRV)
-        memory = findViewById(R.id.memory)
 
 
-        notesRV.layoutManager = LinearLayoutManager(this)
-
-
-        val memoryAdapter = MemoryAdapter(this)
-
-
-        notesRV.adapter = memoryAdapter
-
-
-        viewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
-        )[MemoryViewModel::class.java]
-
-
-        viewModel.allNotes.observe(this,  { list ->
-            list?.let {
-
-                memoryAdapter.updateList(it)
+        binding.Memory?.setOnClickListener {
+            val data = Input.text.toString() + "=" + Output.text.toString()
+            if (data.isNotEmpty()) {
+                viewModel.saveMemory(data)
             }
-        })
-
+        }
     }
-
      private fun addToInputText(buttonVal:String):String
      {
          return "${Input.text}$buttonVal"
