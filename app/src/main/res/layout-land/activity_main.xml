@@ -56,7 +56,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_cos"
@@ -68,7 +69,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_Sine"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_tan"
@@ -80,7 +82,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_cos"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_isPrime"
@@ -93,7 +96,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_pi" />
+            app:layout_constraintTop_toBottomOf="@+id/button_pi"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_sin_inverse"
@@ -107,7 +111,8 @@
 
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_Sine" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Sine"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_cos_Inverse"
@@ -120,12 +125,13 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_sin_inverse"
-            app:layout_constraintTop_toBottomOf="@+id/button_Sine" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Sine"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_tan_Inverse"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/button_background"
             android:text="@string/TanInverse"
@@ -133,7 +139,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_cos_Inverse"
-            app:layout_constraintTop_toBottomOf="@+id/button_cos" />
+            app:layout_constraintTop_toBottomOf="@+id/button_cos"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_pi"
@@ -146,7 +153,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_sin_inverse" />
+            app:layout_constraintTop_toBottomOf="@+id/button_sin_inverse"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Exponent"
@@ -159,7 +167,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_pi"
-            app:layout_constraintTop_toBottomOf="@+id/button_cos_Inverse" />
+            app:layout_constraintTop_toBottomOf="@+id/button_cos_Inverse"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_exponent_Power"
@@ -172,7 +181,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_Exponent"
-            app:layout_constraintTop_toBottomOf="@+id/button_tan_Inverse" />
+            app:layout_constraintTop_toBottomOf="@+id/button_tan_Inverse"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Logarithm"
@@ -185,7 +195,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_isPrime"
-            app:layout_constraintTop_toBottomOf="@+id/button_Exponent" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Exponent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_NaturalLogarithm"
@@ -198,7 +209,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_Logarithm"
-            app:layout_constraintTop_toBottomOf="@+id/button_exponent_Power" />
+            app:layout_constraintTop_toBottomOf="@+id/button_exponent_Power"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_logbase2"
@@ -211,7 +223,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_isPrime" />
+            app:layout_constraintTop_toBottomOf="@+id/button_isPrime"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/buttonSquare"
@@ -223,7 +236,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_logbase2"
-            app:layout_constraintTop_toBottomOf="@+id/button_Logarithm" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Logarithm"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_squareRoot"
@@ -236,7 +250,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/buttonSquare"
-            app:layout_constraintTop_toBottomOf="@+id/button_NaturalLogarithm" />
+            app:layout_constraintTop_toBottomOf="@+id/button_NaturalLogarithm"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_power"
@@ -274,7 +289,7 @@
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <Button
             android:id="@+id/button_firstBracketopen"
@@ -286,7 +301,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_clear"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_firstBracketClose"
@@ -298,7 +314,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_firstBracketopen"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Divide"
@@ -310,7 +327,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_firstBracketClose"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_7"
@@ -322,7 +340,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_clear" />
+            app:layout_constraintTop_toBottomOf="@+id/button_clear"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_8"
@@ -335,7 +354,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_7"
-            app:layout_constraintTop_toBottomOf="@+id/button_firstBracketopen" />
+            app:layout_constraintTop_toBottomOf="@+id/button_firstBracketopen"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_9"
@@ -348,7 +368,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_8"
-            app:layout_constraintTop_toBottomOf="@+id/button_firstBracketClose" />
+            app:layout_constraintTop_toBottomOf="@+id/button_firstBracketClose"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Into"
@@ -361,7 +382,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_9"
-            app:layout_constraintTop_toBottomOf="@+id/button_Divide" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Divide"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_4"
@@ -373,7 +395,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_7" />
+            app:layout_constraintTop_toBottomOf="@+id/button_7"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_5"
@@ -386,7 +409,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_4"
-            app:layout_constraintTop_toBottomOf="@+id/button_8" />
+            app:layout_constraintTop_toBottomOf="@+id/button_8"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_6"
@@ -399,7 +423,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_5"
-            app:layout_constraintTop_toBottomOf="@+id/button_9" />
+            app:layout_constraintTop_toBottomOf="@+id/button_9"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Minus"
@@ -412,7 +437,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_6"
-            app:layout_constraintTop_toBottomOf="@+id/button_Into" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Into"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_1"
@@ -424,7 +450,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_4" />
+            app:layout_constraintTop_toBottomOf="@+id/button_4"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_2"
@@ -437,7 +464,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_1"
-            app:layout_constraintTop_toBottomOf="@+id/button_5" />
+            app:layout_constraintTop_toBottomOf="@+id/button_5"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_3"
@@ -450,7 +478,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_2"
-            app:layout_constraintTop_toBottomOf="@+id/button_6" />
+            app:layout_constraintTop_toBottomOf="@+id/button_6"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Plus"
@@ -463,7 +492,8 @@
             android:textColor="@color/tanAccent"
             android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button_3"
-            app:layout_constraintTop_toBottomOf="@+id/button_Minus" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Minus"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_0"
@@ -477,7 +507,8 @@
             app:layout_constraintEnd_toEndOf="@+id/button_2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/button_1"
-            app:layout_constraintTop_toBottomOf="@+id/button_1" />
+            app:layout_constraintTop_toBottomOf="@+id/button_1"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_DecimalPoint"
@@ -491,7 +522,8 @@
             android:textSize="28sp"
             app:layout_constraintEnd_toStartOf="@+id/button_Equals"
             app:layout_constraintStart_toEndOf="@+id/button_0"
-            app:layout_constraintTop_toBottomOf="@+id/button_3" />
+            app:layout_constraintTop_toBottomOf="@+id/button_3"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/button_Equals"
@@ -505,7 +537,8 @@
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_DecimalPoint"
-            app:layout_constraintTop_toBottomOf="@+id/button_Plus" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Plus"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

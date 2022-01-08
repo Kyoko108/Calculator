@@ -15,8 +15,7 @@ import java.text.DecimalFormat
 
 abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
 
-    // on below line we are creating a variable
-    // for our recycler view, exit text, button and viewmodel.
+
     private lateinit var viewModel: MemoryViewModel
     private lateinit var notesRV: RecyclerView
     private lateinit var memory: FloatingActionButton
@@ -142,7 +141,7 @@ abstract class MainActivity : AppCompatActivity() , NoteClickInterface {
         binding.buttonExponentPower?.setOnClickListener {
             Input.text = addToInputText("exp(")
         }
-binding.memory?.setOnClickListener {
+        binding.memory?.setOnClickListener {
     if(it.isActivated)
     {
         val calculation = StringBuilder()
@@ -159,7 +158,7 @@ binding.memory?.setOnClickListener {
         notesRV.layoutManager = LinearLayoutManager(this)
 
 
-        val memoryAdapter = MemoryAdapter(this, this)
+        val memoryAdapter = MemoryAdapter(this)
 
 
         notesRV.adapter = memoryAdapter
