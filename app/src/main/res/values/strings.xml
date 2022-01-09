@@ -45,6 +45,7 @@
     <string name="equals">=</string>
     <string name="UpdatedAt">Updated At:</string>
     <string name="Memory">Memory</string>
+    <string name="save">Save</string>
 
 
 </resources>

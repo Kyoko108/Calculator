@@ -12,5 +12,5 @@ interface MemoryDao {
     suspend fun saveMemory(mEmory:Memory,data:String)
 
     @Query ( "Select * FROM  Memory")
-    fun getAllMemory():LiveData<List<Memory>>
+   suspend  fun getAllMemory():LiveData<List<Memory>>
 }

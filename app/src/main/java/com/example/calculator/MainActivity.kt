@@ -70,6 +70,7 @@ import java.text.DecimalFormat
             showResult()
 
         }
+
         binding.buttonDecimalPoint.setOnClickListener {
             Input.text = addToInputText(".")
         }
@@ -141,10 +142,11 @@ import java.text.DecimalFormat
 
 
         binding.Memory?.setOnClickListener {
-            val data = Input.text.toString() + "=" + Output.text.toString()
-            if (data.isNotEmpty()) {
-                viewModel.saveMemory(data)
-            }
+
+                val memoryfragment = SaveMemoryFragment()
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view_tag,memoryfragment).commit()
+
+
         }
     }
      private fun addToInputText(buttonVal:String):String
