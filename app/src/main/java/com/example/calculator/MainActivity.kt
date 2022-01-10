@@ -21,8 +21,12 @@ import java.text.DecimalFormat
         setContentView(binding.root)
 
 
-        viewModel.init(application)
+        val adapter = MemoryAdapter()
 
+        viewModel.init(application)
+        viewModel.memory0List.observe(this) {
+            adapter.submitList(it)
+        }
 
         binding.button0.setOnClickListener {
             Input.text = addToInputText("0")
@@ -142,11 +146,8 @@ import java.text.DecimalFormat
 
 
         binding.Memory?.setOnClickListener {
-
                 val memoryfragment = SaveMemoryFragment()
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view_tag,memoryfragment).commit()
-
-
         }
     }
      private fun addToInputText(buttonVal:String):String

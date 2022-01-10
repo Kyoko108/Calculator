@@ -14,11 +14,11 @@ abstract class MemoryDatabase:RoomDatabase() {
     companion object{
         private var INSTANCE:MemoryDatabase?= null
 
-        fun getDatabase (app :Application):MemoryDatabase
+        fun getDatabase (application :Application):MemoryDatabase
         {
             if (INSTANCE == null){
                 INSTANCE = Room.databaseBuilder(
-                    app,MemoryDatabase::class.java,"CalculatorMemory").build()
+                    application,MemoryDatabase::class.java,"CalculatorMemory").build()
             }
 
             return INSTANCE !!

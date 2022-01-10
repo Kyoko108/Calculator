@@ -9,8 +9,8 @@ import androidx.room.Query
 interface MemoryDao {
 
     @Insert
-    suspend fun saveMemory(mEmory:Memory,data:String)
+     suspend fun saveMemory(mEmory:Memory)
 
     @Query ( "Select * FROM  Memory")
-   suspend  fun getAllMemory():LiveData<List<Memory>>
+     fun getAllMemory():LiveData<List<Memory>>
 }

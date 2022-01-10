@@ -298,6 +298,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:text="Memory"
+            android:textColor="@color/tanAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
